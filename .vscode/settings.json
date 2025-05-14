@@ -18,8 +18,8 @@
             "server": "localhost",
             "port": 3306,
             "driver": "MySQL",
-            "database": "mysql",
             "name": "mysql",
+            "database": "my_event",
             "username": "root",
             "password": ""
         }

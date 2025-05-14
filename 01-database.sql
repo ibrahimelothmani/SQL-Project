@@ -1,1 +1,1 @@
-CREATE DATABASE event;
+CREATE DATABASE my_event;
