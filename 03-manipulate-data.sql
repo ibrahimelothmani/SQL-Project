@@ -60,6 +60,10 @@
 
 
 -- The following code updates the name of the event with id 1 to 'Updated Event 1'  
-UPDATE events
-SET min_age = 30
-WHERE id = 1;
+-- UPDATE events
+-- SET min_age = 30
+-- WHERE id = 1;
+
+-- the delete
+DELETE FROM events
+WHERE id = 5;
