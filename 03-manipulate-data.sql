@@ -65,5 +65,5 @@
 -- WHERE id = 1;
 
 -- the delete
-DELETE FROM events
-WHERE id = 5;
+-- DELETE FROM events
+-- WHERE id = 5;
