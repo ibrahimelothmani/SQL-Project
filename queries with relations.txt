@@ -1,0 +1,30 @@
+1. INNER JOIN
+Definition: Returns only the rows where there is a match in both tables based on the join condition.
+Behavior: If a row in one table has no matching row in the other table, it is excluded from the result.
+Use Case: When you only want data that exists in both tables (e.g., users who have placed orders).
+
+2. LEFT JOIN (or LEFT OUTER JOIN)
+Definition: Returns all rows from the left table and the matching rows from the right table. If there’s no match, NULL values are returned for columns from the right table.
+Behavior: Includes every row from the left table, even if it has no corresponding row in the right table.
+Use Case: When you want all records from the left table, regardless of whether they have matches (e.g., all users, including those not attending any events).
+
+3. RIGHT JOIN (or RIGHT OUTER JOIN)
+Definition: Returns all rows from the right table and the matching rows from the left table. If there’s no match, NULL values are returned for columns from the left table.
+Behavior: Includes every row from the right table, even if it has no corresponding row in the left table.
+Use Case: When you want all records from the right table, regardless of matches (e.g., all events, including those with no registered users).
+
+Key Differences
+
+Join Type	Rows Returned	Left Table	Right Table	Non-Matching Rows
+INNER JOIN	Only matching rows	Only matched	Only matched	Excluded
+LEFT JOIN	All left table rows + matching right	All rows	Only matched	Right table columns = NULL
+RIGHT JOIN	All right table rows + matching left	Only matched	All rows	Left table columns = NULL
+
+Visual Analogy
+INNER JOIN: The intersection of two circles in a Venn diagram.
+LEFT JOIN: The entire left circle, plus the intersection.
+RIGHT JOIN: The entire right circle, plus the intersection.
+Notes
+Performance: INNER JOIN is often faster than LEFT or RIGHT JOIN because it processes fewer rows (only matches).
+Schema Context: Using the schema you provided, INNER JOIN would be useful for finding users attending specific events, while LEFT JOIN could list all users (even those not attending) and RIGHT JOIN could list all events (even those with no attendees).
+PostgreSQL/MySQL: The syntax and behavior are identical in both databases.
