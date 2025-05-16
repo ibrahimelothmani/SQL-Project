@@ -1,31 +1,23 @@
 -- Insert data into cities
-INSERT INTO
-    cities (name)
-VALUES
-    ('New York'),
+INSERT INTO cities (name)
+VALUES ('New York'),
     ('Los Angeles'),
     ('Chicago');
-
 -- Insert data into tags
-INSERT INTO
-    tags (name)
-VALUES
-    ('Music'),
+INSERT INTO tags (name)
+VALUES ('Music'),
     ('Technology'),
     ('Sports'),
     ('Art');
-
 -- Insert data into locations
-INSERT INTO
-    locations (
+INSERT INTO locations (
         title,
         street,
         house_number,
         postal_code,
         city_name
     )
-VALUES
-    (
+VALUES (
         'Central Park Venue',
         '5th Ave',
         '100',
@@ -46,12 +38,14 @@ VALUES
         '60601',
         'Chicago'
     );
-
 -- Insert data into users
-INSERT INTO
-    users (first_name, last_name, birthdate, email)
-VALUES
-    ('John', 'Doe', '1990-05-15', 'john.doe@email.com'),
+INSERT INTO users (first_name, last_name, birthdate, email)
+VALUES (
+        'John',
+        'Doe',
+        '1990-05-15',
+        'john.doe@email.com'
+    ),
     (
         'Jane',
         'Smith',
@@ -70,18 +64,14 @@ VALUES
         '1988-11-30',
         'bob.w@email.com'
     );
-
 -- Insert data into organizers
-INSERT INTO
-    organizers (password, user_id)
-VALUES
-    ('hashed_pass_123', 1), -- John Doe
+INSERT INTO organizers (password, user_id)
+VALUES ('hashed_pass_123', 1),
+    -- John Doe
     ('hashed_pass_456', 2);
-
 -- Jane Smith
 -- Insert data into events
-INSERT INTO
-    events (
+INSERT INTO events (
         name,
         date_planned,
         image,
@@ -91,8 +81,7 @@ INSERT INTO
         location_id,
         organizer_id
     )
-VALUES
-    (
+VALUES (
         'Summer Music Festival',
         '2025-07-10 18:00:00',
         'music_fest.jpg',
@@ -122,23 +111,19 @@ VALUES
         3,
         1
     );
-
 -- Insert data into events_tags
-INSERT INTO
-    events_tags (event_id, tag_name)
-VALUES
-    (1, 'Music'),
+INSERT INTO events_tags (event_id, tag_name)
+VALUES (1, 'Music'),
     (1, 'Art'),
     (2, 'Technology'),
     (3, 'Sports');
-
 -- Insert data into events_users
-INSERT INTO
-    events_users (event_id, user_id)
-VALUES
-    (1, 3), -- Alice attends Music Festival
-    (1, 4), -- Bob attends Music Festival
-    (2, 3), -- Alice attends Tech Conference
+INSERT INTO events_users (event_id, user_id)
+VALUES (1, 3),
+    -- Alice attends Music Festival
+    (1, 4),
+    -- Bob attends Music Festival
+    (2, 3),
+    -- Alice attends Tech Conference
     (3, 4);
-
 -- Bob attends Marathon Expo
